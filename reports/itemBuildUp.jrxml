@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="itemBuildUp" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="64913d25-9e65-493f-a2d9-84b7156603a5">
+	<property name="ireport.zoom" value="3.4522712143931056"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1515"/>
+	<parameter name="id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT *
+FROM items
+INNER JOIN USERS ON users.id = items.user_id
+WHERE items.id = $P{id}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="source" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cost_type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cost_method" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="abc_code" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="product_code" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unit_measure" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unit_weight" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="purchase_unit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stock_unit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="issue_unit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stocked" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lot_tracked" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reservable" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_cost" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_mis" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="updated_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="family_code" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="deleted_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="user_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="conversion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pvc_weight" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nylon_weight" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pe_weight" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="xlpe_weight" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="semicon_weight" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="remember_token" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="department_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="group_id" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		<groupHeader>
+			<band height="417">
+				<staticText>
+					<reportElement x="0" y="0" width="100" height="20" uuid="9290652a-b5cb-4b8f-a29a-d7521f8f5a0f"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[ITEM CODE]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="100" y="0" width="432" height="20" uuid="d6725729-9c1d-4137-b63e-1a418177ce3a"/>
+					<textFieldExpression><![CDATA[$F{item}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="20" width="100" height="20" uuid="0e7ca8cd-e4bb-4062-874c-28b515631cdb"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[DESCRIPTION]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="100" y="20" width="432" height="20" uuid="8cbd7fcc-f8a9-4673-9602-c788fe29b61c"/>
+					<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="61" width="169" height="20" uuid="cb7b9733-8697-4e0a-bee4-7e99177ac870"/>
+					<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="61" width="111" height="20" uuid="b00fa80f-fff7-4bc1-86a3-14ed5bb71be8"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[ITEM TYPE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="101" width="111" height="20" uuid="f6a045a4-ce42-4ba2-8d26-bc0a426582a2"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[COST TYPE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="121" width="111" height="20" uuid="69fbd797-e964-431c-9d01-c8aa74c98e55"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[ABC CODE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="141" width="111" height="20" uuid="1dc35524-8b9b-4fbd-8f17-a72012cfe280"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[PRODUCT CODE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="161" width="111" height="20" uuid="2c14f310-64e9-4213-b443-b277814fe5ba"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[UNIT OF MEASURE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="181" width="111" height="20" uuid="bc62ee09-34ea-4e8a-8834-04e006a1b86f"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[UNIT WEIGHT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="201" width="111" height="20" uuid="316371fd-ffc1-4c9e-a72d-62d25a396862"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[PURCHASE UNIT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="221" width="111" height="20" uuid="c2210931-e879-4be5-aaad-68f720ef5ef2"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[STOCK UNIT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="241" width="111" height="20" uuid="e9f40992-c655-4932-ac22-25c904be8099"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[ISSUE UNIT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="261" width="111" height="20" uuid="c0a6ed60-837a-4ca5-b51e-50e2dc3271cf"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[PVC WEIGHT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="281" width="111" height="20" uuid="288f7017-f50c-4278-bc49-b0a7c20e5752"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[NYLON WEIGHT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="301" width="111" height="20" uuid="dc8cc08f-8af1-47d7-9a9e-762d04f50864"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[PE WEIGHT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="321" width="111" height="20" uuid="589c6c63-5398-4572-9f02-2c6cd3253888"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[XLPE WEIGHT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="341" width="111" height="20" uuid="ee4cb5b8-c23d-4c4d-bd0d-d1d94860a3ae"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[SEMICON WEIGHT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="361" width="111" height="20" uuid="3e72e460-1663-45d9-b90a-66de0c63de29"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[CONVERSION]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="81" width="111" height="20" uuid="50bdbbfe-1d27-4a64-b791-f5ca6f4d29fe"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[SOURCE]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="111" y="81" width="100" height="20" uuid="16879d8d-ea24-45bd-bbd2-edbe5e13e371"/>
+					<textFieldExpression><![CDATA[$F{source}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="101" width="100" height="20" uuid="a96a1dad-ed7a-4863-9217-5bce8a63d908"/>
+					<textFieldExpression><![CDATA[$F{cost_type}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="121" width="100" height="20" uuid="fbb64172-6274-4feb-993c-9c2c04248070"/>
+					<textFieldExpression><![CDATA[$F{abc_code}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="141" width="100" height="20" uuid="6efec00e-396f-4ee7-9c0d-f8cfe6c8d6c3"/>
+					<textFieldExpression><![CDATA[$F{product_code}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="161" width="100" height="20" uuid="8851f047-fd96-4b5a-8ab0-6c08e2331595"/>
+					<textFieldExpression><![CDATA[$F{unit_measure}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="181" width="100" height="20" uuid="12281d00-d0b7-4f4f-b4e2-e3d65e373d28"/>
+					<textFieldExpression><![CDATA[$F{unit_weight}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="201" width="100" height="20" uuid="8f3a21dd-edd4-441e-bd8a-fc14c3f1dd4a"/>
+					<textFieldExpression><![CDATA[$F{purchase_unit}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="221" width="100" height="20" uuid="f9066ee0-efa8-40f3-b8ac-40f41867aa6a"/>
+					<textFieldExpression><![CDATA[$F{stock_unit}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="241" width="100" height="20" uuid="6f54236b-caa8-4f65-b9ef-61c8c8587654"/>
+					<textFieldExpression><![CDATA[$F{issue_unit}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="261" width="100" height="20" uuid="0452e82d-006e-4499-8060-1438f12ac96b"/>
+					<textFieldExpression><![CDATA[$F{pvc_weight}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="281" width="100" height="20" uuid="6098fe84-85fb-4a12-9c44-358166040a7e"/>
+					<textFieldExpression><![CDATA[$F{nylon_weight}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="301" width="100" height="20" uuid="2bac2e84-8ea7-4e4c-82f8-a9879feb3edf"/>
+					<textFieldExpression><![CDATA[$F{pe_weight}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="321" width="100" height="20" uuid="c5895008-66f7-4d9d-ad3b-b5dd96f68eb6"/>
+					<textFieldExpression><![CDATA[$F{xlpe_weight}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="341" width="100" height="20" uuid="86e800f6-3dea-4984-a9fd-4d9dd67f418c"/>
+					<textFieldExpression><![CDATA[$F{semicon_weight}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="361" width="100" height="20" uuid="0be01777-d59b-4bde-bfd1-7b41ea260579"/>
+					<textFieldExpression><![CDATA[$F{conversion}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="296" height="57" uuid="74af3b15-5876-4efc-b730-65504b0fbd87"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AMERICAN WIRE & CABLE CO., INC.
+INVENTORY MANAGEMENT
+NEW ITEM DATA BUILD-UP REQUEST]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="13" width="182" height="20" uuid="d361c338-820d-4dbc-90f8-ef3e6b7c8e1e"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Requested by:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="40" width="182" height="20" uuid="c5901423-221f-4c78-a7e5-e5e1bd8cea26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="60" width="182" height="1" uuid="c36063a8-eddb-4013-86da-5ca8291196a3"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="61" width="182" height="20" uuid="c7612af3-b54d-4610-84eb-fc245fad821a"/>
+				<textElement textAlignment="Center">
+					<font isItalic="false"/>
+				</textElement>
+				<text><![CDATA[PRODUCT ENGINEER]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
